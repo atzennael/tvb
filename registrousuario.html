@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>TVB - Registro de Nuevo Usuario</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos para la tabla */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        .center {
+            text-align: center;
+            align-content: center;
+            align-items: center;
+        }
+
+        nav {
+            background-color: #AA7EEE;
+            color: white;
+            padding: 10px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: right;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: #6333AE;
+                }
+
+        .footer-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+            .footer-nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+
+            .footer-nav li {
+                display: inline;
+            }
+
+                .footer-nav li a {
+                    display: inline-block;
+                    color: white;
+                    background-color: #AA7EEE;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                }
+
+                    .footer-nav li a:hover {
+                        background-color: #6333AE;
+                    }
+
+        .button {
+            background-color: #AA7EEE;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+            .button:hover {
+                background-color: #6333AE;
+                text-decoration: none;
+                color: white;
+            }
+
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            height: 40px;
+        }
+        .margen {
+            margin-top: 100px;
+            margin-left: 80px;
+            margin-bottom: 10px;
+        }
+        .name {
+            align-items: center;
+            width: 100%;
+            }
+
+        input {
+            width: 50%;
+            min-height: 25px;
+            border: 0;
+            font-size: 1rem;
+            font-family: Arial, sans-serif;
+            margin-top: 5px;
+            color: black;
+            border-radius: 4px;
+        }
+        .container {
+            margin-left: 300px;
+        }
+            .wrapper {
+            margin-top: 5%;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            -webkit-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+            -moz-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+            box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+        }
+                .margen {
+            margin-top: 100px;
+            margin-left: 300px;
+            margin-bottom: 100px;
+        }
+            .form-group {
+              display: flex; 
+              margin-bottom: 10px; 
+            }
+
+            .form-group label {
+              width: 120px; 
+              text-align: right; 
+            }
+
+            .form-group input[type="text"],
+            .form-group input[type="email"],
+            .form-group input[type="password"] {
+              width: 100%; 
+              padding: 5px; 
+              border: 1px solid #ccc; 
+            }
+            #drag-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            gap: 10px;
+        }
+
+        .draggable {
+            width: 100px;
+            height: 100px;
+            background-color: #6333AE;
+            color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #000;
+            cursor: move;
+        }
+
+        #drop-area {
+            width: 100px;
+            height: 100px;
+            border: 2px dashed #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #drop-area.drag-over {
+            border-color: black;
+            align-content: center;
+        }
+
+        #verification-message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: black;
+            align-content: center;
+            align-items: center;
+            align-self: center;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="fixed-top">
+        <ul>
+                <li><a href="http://localhost/web/ParcialII/contacto.html">Contacto</a></li>
+                <li><a href="http://localhost/web/ParcialII/sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="http://localhost/web/ParcialII/biblioteca.html">Biblioteca</a></li>
+                <li><a href="http://localhost/web/ParcialII/pagina.html">Inicio</a></li>
+            <li><a href="http://localhost/web/ParcialII/iniciosesion.html">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+    <div class="wrapper margen">
+        <div>
+            <h1 class="center">Registro de Nuevo Usuario</h1>
+            <br />
+            <form action="ingresarUsuario.php" method="post" id="user-form">
+                <div class="name">
+                    <label for="usuario">Usuario: </label>
+                    <div class="form-group">
+                        <input type="text" id="usuario" name="usuario" required />
+                    </div>
+                </div>
+                <br />
+                <div>
+                    <label for="pass">Contraseña: </label>
+                    <div class="form-group">
+                        <input type="password" id="pass" name="pass" required />
+                    </div>
+                </div>
+                <br />
+                <div>
+                    <label for="email">Email: </label>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                </div>
+                <br />
+                <div>
+                    <label for="telefono">Teléfono: </label>
+                    <div class="form-group">
+                        <input type="text" id="telefono" name="telefono" required />
+                    </div>
+                </div>
+                <br />
+                <div>
+                    <label for="identificacion">Identificación: </label>
+                    <div class="form-group">
+                        <input type="text" id="identificacion" name="identificacion" required />
+                    </div>
+                </div>
+                <div id="drag-container">
+                    <div id="draggable-1" class="draggable" draggable="true">
+                        <p align="center">Arrastre para verificar</p>
+                    </div>
+                </div>
+                <div id="drop-area"></div>
+                <div id="verification-message" class="hide">
+                    <p align="center">¡Verificación exitosa!</p>
+                </div>
+                <div class="center">
+                    <input type="submit" value="Crear Registro" id="submit-button" class="button hide" />
+                </div>
+            </form>
+            <br>
+            <br>
+        </div>
+    </div>
+    
+    <script>
+        const draggables = document.querySelectorAll('.draggable');
+        const dropArea = document.getElementById('drop-area');
+        const verificationMessage = document.getElementById('verification-message');
+        const submitButton = document.getElementById('submit-button');
+        const userForm = document.getElementById('user-form');
+    
+        draggables.forEach(draggable => {
+            draggable.addEventListener('dragstart', (e) => {
+                e.dataTransfer.setData('text/plain', e.target.id);
+                setTimeout(() => {
+                    e.target.classList.add('hide');
+                }, 0);
+            });
+    
+            draggable.addEventListener('dragend', (e) => {
+                e.target.classList.remove('hide');
+            });
+        });
+    
+        dropArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropArea.classList.add('drag-over');
+        });
+    
+        dropArea.addEventListener('dragleave', () => {
+            dropArea.classList.remove('drag-over');
+        });
+    
+        dropArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropArea.classList.remove('drag-over');
+            const id = e.dataTransfer.getData('text/plain');
+            const draggable = document.getElementById(id);
+            dropArea.appendChild(draggable);
+    
+            verificationMessage.classList.remove('hide');
+            submitButton.classList.remove('hide');
+        });
+    </script>
+    <br>
+    <nav class="footer-nav">
+        <ul>
+                <li><a href="http://localhost/web/ParcialII/contacto.html">Contacto</a></li>
+                <li><a href="http://localhost/web/ParcialII/sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="http://localhost/web/ParcialII/biblioteca.html">Biblioteca</a></li>
+                <li><a href="http://localhost/web/ParcialII/pagina.html">Inicio</a></li>
+            <li><a href="http://localhost/web/ParcialII/iniciosesion.html" target="_blank">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

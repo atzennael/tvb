@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>TVB - Biblioteca</title>
+<style>
+    nav {
+        background-color: #AA7EEE;
+        padding: 10px 0;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    li {
+        float: right;
+    }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+            li a:hover {
+                background-color: #6333AE;
+            }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+    .container {
+        width: 900px;
+        height: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f4f4f4;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .book {
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+    }
+
+        .book img {
+        width: 235px;
+	    float: right;
+	    height: 360px;
+        }
+        .text {
+            flex: 1; 
+            padding: 0 20px; 
+        }
+    .justify {
+        text-align: justify
+    }
+      .footer-nav {
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          background-color: #AA7EEE;
+          margin-top: 20px;
+      }
+
+.footer-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.footer-nav li {
+  display: inline;
+}
+
+.footer-nav li a {
+  display: inline-block;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+    .fixed-top {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        height: 40px;
+    }
+    .content {
+        padding-top: 25px;
+    }
+
+</style>
+</head>
+<body>
+    <nav class="fixed-top">
+        <ul>
+                <li><a href="http://localhost/web/ParcialII/contacto.html">Contacto</a></li>
+                <li><a href="http://localhost/web/ParcialII/sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="http://localhost/web/ParcialII/biblioteca.html">Biblioteca</a></li>
+                <li><a href="http://localhost/web/ParcialII/pagina.html">Inicio</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <h1>Novedades</h1>
+            <div class="book container">
+                <a href="http://localhost/web/ParcialII/eljilguero.html"><h2>El Jilguero</h2></a>
+                <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/81/08/8108c9e5d0d838984d3599f9774f0e62.jpg" alt="El Jilguero">
+                <p>Autor: Donna Tartt</p>
+                <p class="justify">Theo Decker lleva más de una semana encerrado entre esas cuatro paredes, fumando sin parar, bebiendo vodka y masticando miedo. Es un hombre joven, pero su historia es larga y ni él sabe bien por qué ha llegado hasta aquí. ¿Cómo empezó todo? Con una explosión en el Metropolitan Museum hace unos diez años y la imagen de un jilguero de plumas doradas, un cuadro espléndido del siglo XVIII que desapareció entre el polvo y los cascotes. Quien se lo llevó es el mismo Theo, un chiquillo entonces, que de pronto se quedó huérfano de madre y se dedicó a desgastar su vida: las drogas lo arañaron, la indiferencia del padre lo cegó y su amistad con el joven Boris lo llevó a la delincuencia sin más trámites. Todo parecía a punto de acabar, y de la peor de las maneras, en el desierto de Nevada, pero no. Al cabo de un tiempo, otra vez las calles de Manhattan, una pequeña tienda de anticuario y un bulto sospechoso que ahora va pasando de mano en mano hasta llegar a Holanda. ¿Cómo acabará todo?</p>
+                <p>Precio: <strong>$4.99</strong></p>
+            </div>
+
+            <div class="book container">
+                <img src="https://m.media-amazon.com/images/I/71gnmyiJGnL._AC_UF1000,1000_QL80_.jpg" alt="El Exorcista">
+                <a href="http://localhost/web/ParcialII/elexorcista.html"><h2>El Exorcista</h2></a>
+                <p>Autor: William Peter Blatty</p>
+                <p class="justify">Cuenta la historia de Regan McNeil, una joven de once años que se convierte de la noche a la mañana en la fatal víctima del demonio Pazuzu. El grado de posesión rebasa límites insospechados y solo el sacerdote Damien Karras parece dispuesto a hacerse cargo de la solución más comprometida: el exorcismo.</p>
+                <p>Precio: <strong>$7.99</strong></p>
+            </div>
+            <br />
+            <div class="book container">
+                <img src="https://www.planetadelibros.com.ec/usuaris/libros/fotos/180/m_libros/portada_la-insoportable-levedad-del-ser_milan-kundera_202005042050.jpg" alt="La Insoportable Levedad del Ser">
+                <a href="http://localhost/web/ParcialII/lainsoportable.html"><h2>La Insoportable Levedad del Ser</h2></a>
+                <p>Autor: Milan Kundera</p>
+                <p class="justify">Ésta es una historia de amor, o sea de celos, de sexo, de traiciones y también de las debilidades y paradojas de la vida cotidiana de dos parejas cuyos destinos se entrelazan. Los celos de Teresa por Tomás, el terco amor de éste por ella, opuesto a su irrefrenable deseo de otras mujeres, el idealismo de Franz, amante de Sabina, y la necesidad de ésta, amante también de Tomás, de perseguir una libertad que tan sólo la conduce a la insoportable levedad del ser, se convierten de simple anécdota en reflexión sobre problemas que nos afectan a todos.</p>
+                <p>Precio: <strong>$6.99</strong></p>
+            </div>
+
+            <div class="book container">
+                <img src="https://stephenking.es/img/obras/34/cover-grande.jpg" alt="Dolores Claiborne">
+                <a href="http://localhost/web/ParcialII/dolores.html"><h2>Dolores Claiborne</h2></a>
+                <p>Autor: Stephen King</p>
+                <p class="justify">Durante treinta años, los habitantes de Little Tall Island han esperado averiguar qué pasó durante el extraño día -el día del eclipse total- en que murió el marido de Dolores Claiborne. Ahora la policía quiere averiguar qué pasó ayer, cuando la rica mujer para la que Dolores hacía las tareas domésticas, una mujer postrada en la cama, murió repentinamente. Sin otra opción más que hablar, Dolores presenta su conmovedora confesión.Revela los lazos extraños y terribles a que la han obligado sus secretos. Revela las abominables consecuencias de un feroz amor maternal. Revela la ira silenciosa que puede llenar de odio el corazón de una mujer.</p>
+                <p>Precio: <strong>$12.99</strong></p>
+            </div>
+
+            <div class="book container">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_988440-MLA52123814804_102022-O.webp" alt="La Canción de Aquiles">
+                <a href="http://localhost/web/ParcialII/aquiles.html"><h2>La Canción de Aquiles</h2></a>
+                <p>Autor: Madeline Miller</p>
+                <p class="justify">Grecia en la era de los héroes. Patroclo, un príncipe joven y torpe, ha sido exiliado al reino de Ftía, donde vive a la sombra del rey Peleo y su hijo divino, Aquiles. Aquiles, el mejor de los griegos, es todo lo que no es Patroclo: fuerte, apuesto, hijo de una diosa. Un día Aquiles toma bajo su protección al lastimoso príncipe y ese vínculo provisional da paso a una sólida amistad mientras ambos se convierten en jóvenes habilidosos en las artes de la guerra. Pero el destino nunca está lejos de los talones de Aquiles. Cuando se extiende la noticia del rapto de Helena de Esparta, se convoca a los hombres de Grecia para asediar la ciudad de Troya. Aquiles, seducido por la promesa de un destino glorioso, se une a la causa, y Patroclo, dividido entre el amor y el miedo por su compañero, lo sigue a la guerra. Poco podía imaginar que los años siguientes iban a poner a prueba todo cuanto habían aprendido y todo cuanto valoraban profundamente.</p>
+                <p>Precio: <strong>$5.99</strong></p>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+    <nav class="footer-nav">
+        <ul>
+                <li><a href="http://localhost/web/ParcialII/contacto.html">Contacto</a></li>
+                <li><a href="http://localhost/web/ParcialII/sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="http://localhost/web/ParcialII/biblioteca.html">Biblioteca</a></li>
+                <li><a href="http://localhost/web/ParcialII/pagina.html">Inicio</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+</body>
+</html>

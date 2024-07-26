@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVB - El Jilguero</title>
+    <style>
+        nav {
+            background-color: #AA7EEE;
+            padding: 10px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: right;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: #6333AE;
+                }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: left;
+            margin: 50px;
+        }
+
+        .justify {
+            text-align: justify
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        .container {
+            display: flex;
+            align-items: left;
+            width: 1000px;
+            height: auto;
+            margin-top: 10px;
+            margin-left: 100px;
+            margin-bottom: 10px;
+        }
+
+        .text {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .img {
+            width: 235px;
+            height: 360px;
+        }
+
+        button {
+            background-color: #AA7EEE;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+            button:hover {
+                background-color: #6333AE;
+                text-decoration: none;
+                color: white;
+            }
+
+        a {
+            text-decoration: none;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .footer-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #AA7EEE;
+            margin-top: 20px;
+        }
+
+            .footer-nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+
+            .footer-nav li {
+                display: inline;
+            }
+
+                .footer-nav li a {
+                    display: inline-block;
+                    color: white;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                }
+
+        .margen {
+            margin-top: 10px;
+            margin-left: 100px;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            padding-bottom: 50px;
+            padding-top: 50px;
+        }
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            height: 40px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            function actualizarCarrito() {
+                $.ajax({
+                    url: "carrito.php",
+                    type: "GET",
+                    success: function (data) {
+                        $("#carrito").html(data);
+                    }
+                });
+            }
+
+            actualizarCarrito();
+        });
+    </script>
+</head>
+<body>
+    <nav class="fixed-top">
+        <ul>
+                <li><a href="http://localhost/web/ParcialII/contacto.html">Contacto</a></li>
+                <li><a href="http://localhost/web/ParcialII/sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="http://localhost/web/ParcialII/biblioteca.html">Biblioteca</a></li>
+                <li><a href="http://localhost/web/ParcialII/pagina.html">Inicio</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h2 class="text">El Jilguero</h2>
+        <div class="container">
+            <img class="img" src="https://images.cdn3.buscalibre.com/fit-in/360x360/81/08/8108c9e5d0d838984d3599f9774f0e62.jpg" alt="El jilguero">
+            <p class="text justify">Autor: Donna Tartt.<br /><br />Theo Decker lleva más de una semana encerrado entre esas cuatro paredes, fumando sin parar, bebiendo vodka y masticando miedo. Es un hombre joven, pero su historia es larga y ni él sabe bien por qué ha llegado hasta aquí. ¿Cómo empezó todo? Con una explosión en el Metropolitan Museum hace unos diez años y la imagen de un jilguero de plumas doradas, un cuadro espléndido del siglo XVIII que desapareció entre el polvo y los cascotes. Quien se lo llevó es el mismo Theo, un chiquillo entonces, que de pronto se quedó huérfano de madre y se dedicó a desgastar su vida: las drogas lo arañaron, la indiferencia del padre lo cegó y su amistad con el joven Boris lo llevó a la delincuencia sin más trámites. Todo parecía a punto de acabar, y de la peor de las maneras, en el desierto de Nevada, pero no. Al cabo de un tiempo, otra vez las calles de Manhattan, una pequeña tienda de anticuario y un bulto sospechoso que ahora va pasando de mano en mano hasta llegar a Holanda. ¿Cómo acabará todo?</p>
+        </div>
+        <div class="containerprecio">
+            <p class="margen">Precio: <strong>$4.99</strong></p>
+        </div>
+        <br>
+        <br>
+        <!-- Formulario de añadir al carrito -->
+        <form action="carrito.php" method="post" class="center">
+            <input type="hidden" name="producto" value="El Jilguero">
+            <input type="hidden" name="precio" value="4.99">
+            <button type="submit">Añadir al carrito</button>
+        </form>
+        <br>
+        <br>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="http://localhost/web/ParcialII/contacto.html">Contacto</a></li>
+                <li><a href="http://localhost/web/ParcialII/sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="http://localhost/web/ParcialII/biblioteca.html">Biblioteca</a></li>
+                <li><a href="http://localhost/web/ParcialII/pagina.html">Inicio</a></li>
+            </ul>
+        </nav>
+</body>
+</html>

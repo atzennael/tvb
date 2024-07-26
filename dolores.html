@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVB - Dolores Claiborne</title>
+    <style>
+        nav {
+            background-color: #AA7EEE;
+            padding: 10px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        li {
+            float: right;
+        }
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+                li a:hover {
+                    background-color: #6333AE;
+                }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .center {
+            text-align: center;
+        }
+        h2 {
+            text-align: left;
+	    margin: 50px;
+        }
+        .justify {
+            text-align: justify
+        }
+        .left{
+            text-align: left;
+        }
+        .container {
+            display: flex;
+            align-items: left;
+	    width: 1000px;
+	    height: auto;
+	    margin-top: 10px;
+	    margin-left: 100px;
+	    margin-bottom: 10px;
+        }
+        .text {
+            flex: 1; 
+            padding: 0 20px; 
+        }
+        .img {
+            width: 235px;
+            height: 360px;
+        }
+        button {
+            background-color: #AA7EEE;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+            button:hover {
+                background-color: #6333AE;
+                text-decoration: none;
+                color: white;
+            }
+
+        a {
+            text-decoration: none;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .footer-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #AA7EEE;
+            margin-top: 20px;
+        }
+
+            .footer-nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+
+            .footer-nav li {
+                display: inline;
+            }
+
+                .footer-nav li a {
+                    display: inline-block;
+                    color: white;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                }
+        .margen {
+            margin-top: 10px;
+            margin-left: 100px;
+            margin-bottom: 10px;
+        }
+        .content {
+            padding-bottom: 50px;
+        }
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            height: 40px;
+        }
+        .content {
+            padding-bottom: 50px;
+            padding-top: 50px;
+        }
+    </style>
+    <body>
+        <nav class="fixed-top">
+            <ul>
+                <li><a href="http://localhost/web/ParcialII/contacto.html">Contacto</a></li>
+                <li><a href="http://localhost/web/ParcialII/sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="http://localhost/web/ParcialII/biblioteca.html">Biblioteca</a></li>
+                <li><a href="http://localhost/web/ParcialII/pagina.html">Inicio</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h2 class="text">Dolores Claiborne</h2>
+            <div class="container">
+                <img class="img" src="https://stephenking.es/img/obras/34/cover-grande.jpg" alt="Dolores Claiborne">
+                <p class="text justify">Autor: Stephen King<br /><br />Durante treinta años, los habitantes de Little Tall Island han esperado averiguar qué pasó durante el extraño día -el día del eclipse total- en que murió el marido de Dolores Claiborne. Ahora la policía quiere averiguar qué pasó ayer, cuando la rica mujer para la que Dolores hacía las tareas domésticas, una mujer postrada en la cama, murió repentinamente. Sin otra opción más que hablar, Dolores presenta su conmovedora confesión.Revela los lazos extraños y terribles a que la han obligado sus secretos. Revela las abominables consecuencias de un feroz amor maternal. Revela la ira silenciosa que puede llenar de odio el corazón de una mujer.</p>
+            </div>
+            <p class="margen">Precio: <strong>$12.99</strong></p>
+            <br>
+            <br>
+            <!-- Formulario de añadir al carrito -->
+            <form action="carrito.php" method="post" class="center">
+                <input type="hidden" name="producto" value="Dolores Claiborne">
+                <input type="hidden" name="precio" value="12.99">
+                <button type="submit">Añadir al carrito</button>
+            </form>
+        </div>
+        <br>
+        <br>
+        </div>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="http://localhost/web/ParcialII/contacto.html">Contacto</a></li>
+                <li><a href="http://localhost/web/ParcialII/sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="http://localhost/web/ParcialII/biblioteca.html">Biblioteca</a></li>
+                <li><a href="http://localhost/web/ParcialII/pagina.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>TVB - Inicio de Sesión</title>
+    <style>
+        /* Estilos para la tabla */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4
+        }
+
+        .center {
+            text-align: center;
+            align-content: center;
+            align-items: center;
+        }
+
+        nav {
+            background-color: #AA7EEE;
+            color: white;
+            padding: 10px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: right;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: #6333AE;
+                }
+
+        .footer-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+            .footer-nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+
+            .footer-nav li {
+                display: inline;
+            }
+
+                .footer-nav li a {
+                    display: inline-block;
+                    color: white;
+                    background-color: #AA7EEE;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                }
+
+                    .footer-nav li a:hover {
+                        background-color: #6333AE;
+                    }
+
+        .button {
+            background-color: #AA7EEE;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+            .button:hover {
+                background-color: #6333AE;
+                text-decoration: none;
+                color: white;
+            }
+
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            height: 40px;
+        }
+        .margen {
+            margin-top: 100px;
+            margin-left: 80px;
+            margin-bottom: 10px;
+        }
+    	.name {
+            align-items: center;
+            width: 100%;
+            }
+
+        input {
+            width: 50%;
+            min-height: 25px;
+            border: 0;
+            font-size: 1rem;
+            font-family: Arial, sans-serif;
+            margin-top: 5px;
+            color: black;
+            border-radius: 4px;
+            
+            -webkit-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+            -moz-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+            box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);            
+        }
+        .container {
+        	margin-left: 500px;
+            margin-right: 500px;
+            background-color: #f4f4f4;
+        }
+        form {
+            width: 100%;
+        }
+
+        form > * {
+                margin-top: 20px;
+            }
+        label {
+            font-size: 14px;
+            color: black;
+        }
+        .error-message {
+          background-color: red;
+          color: white;
+          padding: 10px;
+          border-radius: 5px;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 100;
+        }
+            .wrapper {
+            margin-top: 5%;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            -webkit-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+            -moz-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+            box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+        }
+    </style>
+</head>
+<body>
+    <nav class="fixed-top">
+        <ul>
+                <li><a href="http://localhost/web/ParcialII/contacto.html">Contacto</a></li>
+                <li><a href="http://localhost/web/ParcialII/sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="http://localhost/web/ParcialII/biblioteca.html">Biblioteca</a></li>
+                <li><a href="http://localhost/web/ParcialII/pagina.html">Inicio</a></li>
+            <li><a href="http://localhost/web/ParcialII/iniciosesion.html">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+<div class="margen">
+    <h1 class="center">TVB - Iniciar Sesión</h1>
+    <br />
+    
+        <div class="center container">
+            <form action="validar.php" method="post">
+            <label for="usuario">Usuario: </label>
+            <input type="text" id="usuario" name="usuario" required />
+        </div>
+        <br />
+        <br />
+        <br>
+        <div class="center container">
+            <label for="pass">Contraseña: </label>
+            <input type="password" id="pass" name="pass" required />
+        </div>
+        <br />
+        <br />
+        <br>
+        <br>
+        <div class="center container">
+            <input type="submit" value="Iniciar Sesión" class="button" />
+        </div>
+    </form>
+            <p>
+        <?php echo isset($error_message) ? $error_message : ""; ?>
+    </p>
+    <br />
+    <br />
+</div>
+    <nav class="footer-nav">
+        <ul>
+                <li><a href="http://localhost/web/ParcialII/contacto.html">Contacto</a></li>
+                <li><a href="http://localhost/web/ParcialII/sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="http://localhost/web/ParcialII/biblioteca.html">Biblioteca</a></li>
+                <li><a href="http://localhost/web/ParcialII/pagina.html">Inicio</a></li>
+            <li><a href="http://localhost/web/ParcialII/iniciosesion.html">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
