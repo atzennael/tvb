@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -313,3 +314,320 @@
     </nav>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVB - Checkout</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .wrapper {
+            margin-top: 5%;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            -webkit-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+            -moz-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+            box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+        }
+
+        .container {
+            width: 65%;
+            padding: 5% 10%;
+        }
+
+        h1 {
+            align-self: center;
+        }
+
+        form {
+            width: 100%;
+        }
+
+            form > * {
+                margin-top: 20px;
+            }
+
+        input {
+            width: 100%;
+            min-height: 25px;
+            border: 0;
+            font-size: 1rem;
+            font-family: Arial, sans-serif;
+            margin-top: 5px;
+            color: black;
+            border-radius: 4px;
+        }
+
+        label {
+            font-size: 14px;
+            color: black;
+        }
+
+        h1 {
+            font-size: 24px;
+            line-height: 10px;
+            color: black;
+        }
+
+            h1:nth-of-type(2) {
+                margin-top: 10%;
+            }
+
+        .name {
+            justify-content: space-between;
+            display: flex;
+            width: 100%;
+        }
+
+            .name > div {
+                width: 45%;
+            }
+
+        .address-info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .address-info > div {
+                width: 30%;
+            }
+
+        .cc-info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .cc-info > div {
+                width: 45%;
+            }
+
+        button {
+            background-color: #AA7EEE;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+            button:hover {
+                background-color: #6333AE;
+                text-decoration: none;
+                color: white;
+            }
+
+        a {
+            text-decoration: none;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .center {
+            align-items: center;
+            align-content: center;
+            text-align: center;
+        }
+
+        @media (max-width: 500px) {
+            .wrapper {
+                width: 100%;
+            }
+
+            .container {
+                width: 100%;
+            }
+
+            form h1 {
+                text-align: center;
+            }
+
+            .name,
+            .address-info,
+            .cc-info {
+                flex-direction: column;
+                width: 100%;
+            }
+
+                .name > div,
+                .address-info > div,
+                .cc-info > div {
+                    align-items: center;
+                    flex-direction: column;
+                    width: 100%;
+                    display: flex;
+                }
+
+            input {
+                margin: 5px 0;
+                min-height: 30px;
+            }
+        }
+
+        nav {
+            background-color: #AA7EEE;
+            padding: 10px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: right;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: #6333AE;
+                }
+
+        .footer-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #AA7EEE;
+            margin-top: 20px;
+        }
+
+            .footer-nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+
+            .footer-nav li {
+                display: inline;
+            }
+
+                .footer-nav li a {
+                    display: inline-block;
+                    color: white;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                }
+
+                    .footer-nav li a:hover {
+                        background-color: #6333AE;
+                    }
+
+        .content {
+            padding-bottom: 50px;
+        }
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="fixed-top">
+        <ul>
+                <li><a href="http://localhost/web/ParcialII/contacto.html">Contacto</a></li>
+                <li><a href="http://localhost/web/ParcialII/sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="http://localhost/web/ParcialII/biblioteca.html">Biblioteca</a></li>
+                <li><a href="http://localhost/web/ParcialII/pagina.html">Inicio</a></li>
+        </ul>
+    </nav>
+    <div class="wrapper">
+        <div class="content">
+            <div class="container">
+                <form action="">
+                    <h1>
+                        <i class="fas fa-shipping-fast"></i>Datos de Facturación
+                    </h1>
+                    <div class="name">
+                        <div>
+                            <label for="f-name">Nombres</label>
+                            <input type="text" name="f-name">
+                        </div>
+                        <div>
+                            <label for="l-name">Apellidos</label>
+                            <input type="text" name="l-name">
+                        </div>
+                    </div>
+                    <div class="street">
+                        <label for="name">Dirección</label>
+                        <input type="text" name="address">
+                    </div>
+                    <div class="address-info">
+                        <div>
+                            <label for="city">Identificación</label>
+                            <input type="text" name="city">
+                        </div>
+                        <div>
+                            <label for="state">Ciudad</label>
+                            <input type="text" name="state">
+                        </div>
+                        <div>
+                            <label for="zip">Provincia</label>
+                            <input type="text" name="zip">
+                        </div>
+                    </div>
+                    <h1>
+                        <i class="far fa-credit-card"></i>Información de Pago
+                    </h1>
+                    <div class="cc-num">
+                        <label for="card-num">Número de Tarjeta</label>
+                        <input type="text" name="card-num">
+                    </div>
+                    <div class="cc-info">
+                        <div>
+                            <label for="card-num">Fecha de Expiración</label>
+                            <input type="text" name="expire">
+                        </div>
+                        <div>
+                            <label for="card-num">CCV</label>
+                            <input type="text" name="security">
+                        </div>
+                    </div>
+                    <div class="button center">
+                        <button><a href="http://localhost/web/ParcialII/compraexitosa.html">Comprar</a></button>
+                        <button><a href="http://localhost/web/ParcialII/carrito.php">Volver al Carrito</a></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <nav class="footer-nav">
+        <ul>
+                <li><a href="http://localhost/web/ParcialII/contacto.html">Contacto</a></li>
+                <li><a href="http://localhost/web/ParcialII/sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="http://localhost/web/ParcialII/biblioteca.html">Biblioteca</a></li>
+                <li><a href="http://localhost/web/ParcialII/pagina.html">Inicio</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+>>>>>>> 86680ea (Inicial commit de mi sitio web)
